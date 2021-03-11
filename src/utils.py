@@ -18,7 +18,7 @@ def finalize_can():
 def rcv_can_msgs(selected_id , can ):
 
     # start sniffing
-    msg = can.recv()
+    msg = can.recv(30.0)
 
     # filtering
     Id = msg.arbitration_id
@@ -28,23 +28,10 @@ def rcv_can_msgs(selected_id , can ):
         ts = msg.timestamp
 
         hex_data = []
-        for i in dlc:
+        for i in range(dlc):
             hex_data.append(data[i])
 
-        # plot
-        plt.cla()
-        plt.scatter(ts , tuple(hex_data))
+        print(hex_data)
 
 
-
-                
-
-
-
-
-        
-
-
-    
-    
        
