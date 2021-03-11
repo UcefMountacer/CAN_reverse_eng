@@ -28,7 +28,6 @@ def animate(i):
 def main():
 
     init_can()
-    finalize_can()
 
     global can0
     can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan_ctypes')

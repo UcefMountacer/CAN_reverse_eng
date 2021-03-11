@@ -8,7 +8,6 @@ import pandas as pd
 def main():
 
     init_can()
-    finalize_can()
 
     can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan_ctypes')
 
