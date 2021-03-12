@@ -10,10 +10,13 @@ def main():
     init_can()
 
     can0 = can.interface.Bus(channel = 'can0', bustype = 'socketcan_ctypes')
+    print('can0 ready !')
 
     # select id
     selected_id = input('enter selected id to be plotted in rt')
+    print('id selected !')
 
+    print('receiving...')
     rcv_can_msgs(selected_id, can0)
 
 
