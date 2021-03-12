@@ -1,8 +1,8 @@
 
 from src.utils import *
-from matplotlib.animation import FuncAnimation
+# from matplotlib.animation import FuncAnimation
 import can
-import pandas as pd
+# import pandas as pd
 
 
 def main():

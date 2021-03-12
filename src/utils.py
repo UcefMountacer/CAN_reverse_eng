@@ -1,7 +1,7 @@
 
 import os
 import can
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 
 def init_can():
