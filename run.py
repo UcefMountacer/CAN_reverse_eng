@@ -17,7 +17,9 @@ def main():
     print('id selected !')
 
     print('receiving...')
-    rcv_can_msgs(selected_id, can0)
+    while(1):
+    
+    	rcv_can_msgs(selected_id, can0)
 
 
 

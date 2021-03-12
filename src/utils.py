@@ -19,10 +19,12 @@ def rcv_can_msgs(selected_id , can ):
 
     # start sniffing
     msg = can.recv(30.0)
+    #print(msg.arbitration_id)
 
     # filtering
+    #'''
     Id = msg.arbitration_id
-    if Id == selected_id:
+    if Id == int(selected_id):
         data = msg.data
         dlc = msg.dlc
         ts = msg.timestamp
@@ -32,6 +34,7 @@ def rcv_can_msgs(selected_id , can ):
             hex_data.append(data[i])
 
         print(hex_data)
+    #'''
 
 
        
